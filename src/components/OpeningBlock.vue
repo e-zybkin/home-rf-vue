@@ -2,7 +2,7 @@
 	<div class="block">
 		<h2 class="title">Проёмы</h2>
 
-		<OpeningInput
+		<OpeningInputList
 			:inputs="inputs"
 			@delete="deleteInput"
 		/>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-	import OpeningInput from './OpeningInput.vue';
+	import OpeningInputList from './OpeningInputList.vue';
 	export default {
 		data() {
 			return {
@@ -28,7 +28,7 @@
 			}
 		},
 		components: {
-			OpeningInput,
+			OpeningInputList,
 		},
 		methods: {
 			addNewInput() {

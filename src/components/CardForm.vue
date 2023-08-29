@@ -1,7 +1,7 @@
 <template>
 	<form class="form" @submit.prevent>
 		<WallSizeInput />
-		<OpeningInputBlock/>
+		<OpeningBlock/>
 
 		<button
 			class="btn"
@@ -12,12 +12,12 @@
 
 <script>
 	import WallSizeInput from './WallSizeInput.vue';
-	import OpeningInputBlock from './OpeningInputBlock.vue';
+	import OpeningBlock from './OpeningBlock.vue';
 
 	export default {
 		components: {
 			WallSizeInput,
-			OpeningInputBlock,
+			OpeningBlock,
 		},
 	}
 </script>
