@@ -1,34 +1,34 @@
-# home-rf-vue
+<h1 align="center">HOME-RF-VUE</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+Небольшое тестовое задание на позицию стажёра фронтенд разработчика в компанию ДОМ.РФ
 
-## Recommended IDE Setup
+Ознакомиться с рабочей версией проекта можно [здесь](https://e-zybkin.github.io/home-rf-vue/).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<h2>Технологический стек</h2>  
 
-## Customize configuration
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  
+- ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)  
+- ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)  
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Настройка проекта
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Компиляция и live-server для разработки
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Компиляция и минификация для деплоя
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Запуск линтера [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
