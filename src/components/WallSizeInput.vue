@@ -1,7 +1,7 @@
 <template>
 	<div class="block">
 		<h2 class="title">Стена</h2>
-		<img 
+		<img
 			src="../assets/wall.jpg"
 			alt="Великие художества"
 			class="picture"
@@ -12,12 +12,15 @@
 				<label>
 					Укажите общую длину стены - перегородки в метрах погонных (м):
 				</label>
-				<input 
+				<input
+					:value="lengthSize"
+					@input="$emit('update:lengthSize', Number($event.target.value))"
 					type="number"
 					id="lengthSize"
 					name="lengthSize"
 					required
 					placeholder="0"
+					min="1"
 				>
 			</p>
 			
@@ -26,11 +29,14 @@
 					Введите её высоту в метрах (м):
 				</label>
 				<input
+					:value="heightSize"
+					@input="$emit('update:heightSize', Number($event.target.value))"
 					type="number"
 					id="heightSize"
 					name="heightSize"
 					required
 					placeholder="0"
+					min="1"
 				>
 			</p>
 		</div>
@@ -39,7 +45,14 @@
 
 <script>
 	export default {
-		
+		props: {
+			lengthSize: {
+				type: Number,
+			},
+			heightSize: {
+				type: Number,
+			}
+		}
 	}
 </script>
 

@@ -7,7 +7,7 @@
 			@delete="deleteInput"
 		/>
 
-		<button type="button" class="btn" @click="addNewInput">Добавить проём</button>
+		<button type="button" class="btn" @click="addNewInput(Date.now(), 0, 0)">Добавить проём</button>
 
 		<img 
 			src="../assets/open.jpg"
@@ -20,27 +20,21 @@
 <script>
 	import OpeningInputList from './OpeningInputList.vue';
 	export default {
-		data() {
-			return {
-				inputs: [
-					{id: 1, widthSize: 10, heightWallSize: 15},
-				],
+		props: {
+			inputs: {
+				type: Array,
+				required: true 
 			}
 		},
 		components: {
 			OpeningInputList,
 		},
 		methods: {
-			addNewInput() {
-				const newInput = {
-					id: Date.now(),
-					widthSize: 0,
-					heightWallSize: 0,
-				}
-				this.inputs.push(newInput);
+			addNewInput(id, widthSize, heightWallSize) {
+				this.$emit('add', id, widthSize, heightWallSize)
 			},
 			deleteInput(index) {
-				this.inputs.splice(index, 1);
+				this.$emit('delete', index)
 			}
 		}
 	}

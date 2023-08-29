@@ -1,13 +1,36 @@
 <template>
 	<main>
-    <CardForm  />
-		<CalcResult />
+    <CardForm  @calculate="calculateRes"/>
+		<CalcResult :message="message"/>
   </main>
 </template>
 
-<script setup>
+<script>
 import CardForm from './CardForm.vue'
 import CalcResult from './CalcResult.vue'
+
+export default {
+	components: {
+		CardForm,
+		CalcResult,
+	},
+	data() {
+		return {
+			message: {
+				messageCode: '',
+				count: 0,
+				weight: 0,
+			},
+		}
+	},
+	methods: {
+		calculateRes(code, count, weight) {
+			this.message.messageCode = code;
+			this.message.count = count;
+			this.message.weight = weight;
+		},
+	}
+}
 </script>
 
 <style scoped>
