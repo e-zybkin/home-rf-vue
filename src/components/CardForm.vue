@@ -36,8 +36,6 @@ export default {
       this.inputs.splice(index, 1)
     },
     calculateRes() {
-      console.log(this.inputs)
-
       const zeroInOpening =
         this.inputs.filter((item) => item.widthSize === 0 && item.heightWallSize === 0).length > 0
 
@@ -59,8 +57,6 @@ export default {
           const count = Math.ceil((wallArea - openArea) / 0.3335)
           const weight = Math.ceil(count * 36)
           this.$emit('calculate', 200, count, weight)
-          console.log(count)
-          console.log(weight)
         }
       }
     }
